@@ -1,0 +1,91 @@
+<div class="mainbox">
+  <h1>Booking Online Now</h1>
+  <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <fieldset>
+      <label
+        >First Name
+        <input
+          type="text"
+          name="firstname"
+          id="firstname"
+          [(ngModel)]="heroData.customerName"
+          required
+          #firstnameCtrl="ngModel"
+        />
+        <span
+          class="spani"
+          *ngIf="firstnameCtrl.invalid && !firstnameCtrl.pristine"
+          >Name is required</span
+        ></label
+      >
+      <label
+        >Tel:
+        <input
+          type="text"
+          name="phone"
+          id="phone"
+          [(ngModel)]="heroData.customerPhone"
+          required
+          placeholder="example: +995******"
+          #phoneCtrl="ngModel"
+        />
+        <span class="spani" *ngIf="phoneCtrl.invalid && !phoneCtrl.pristine"
+          >Phone is required</span
+        >
+      </label>
+
+      <label>
+        Check-in Date
+        <input
+          type="date"
+          name="check-in-date"
+          [(ngModel)]="heroData.checkInDate"
+          (ngModelChange)="updateCheckOutMinDate()"
+          (change)="onDateChange($event)"
+          appDisableDates
+          required
+        />
+      </label>
+      <label>
+        Check-out Date
+        <input
+          type="date"
+          name="check-out-date"
+          [(ngModel)]="heroData.checkOutDate"
+          [min]="minCheckOutDate"
+          (change)="onDateChange($event)"
+          [ngClass]="{ 'inactive-date': isDateDisabled(heroData.checkOutDate) }"
+          required
+        />
+      </label>
+      <label
+        >totalPrice
+        <input
+          type=""
+          name="price"
+          id="price"
+          disabled
+          [(ngModel)]="heroData.totalPrice"
+          [placeholder]="
+            totalPrice ? (totalPrice | currency : '₾') : 'Total...'
+          "
+          required
+        />
+      </label>
+    </fieldset>
+    <fieldset>
+      <label>
+        Accomodation Type
+        <select name="accomodation" id="accomodation">
+          <option
+            *ngFor="let accomodation of accomodation"
+            [value]="accomodation"
+          >
+            {{ accomodation }}
+          </option>
+        </select> </label
+      ><br />
+    </fieldset>
+    <input [disabled]="heroForm.invalid" type="submit" value="Submit" />
+  </form>
+</div>

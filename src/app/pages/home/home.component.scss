@@ -1,0 +1,222 @@
+$color_1: #cc070c;
+$maincolor: #012c56;
+
+.overlay {
+  height: 100vh;
+}
+
+.container1 {
+  position: relative;
+  width: 100%;
+
+  .logobanner,
+  .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .logobanner {
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+  }
+  .banner {
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+  }
+}
+
+.home-sec-1 {
+  display: flex;
+  justify-content: space-around;
+  width: 1300px;
+  margin: 0 auto;
+
+  margin: 80px auto;
+  .home-sec-1-left {
+    width: 600px;
+    span {
+      margin-left: 20px;
+      color: #eee;
+    }
+    span::before {
+      display: inline-block;
+      content: "";
+      border-bottom: 0.3rem solid red;
+      width: 7rem;
+      margin-right: 15rem;
+      transform: translateY(-0.3rem);
+    }
+
+    h1 {
+      font-size: 26px;
+      color: #eee;
+      font-weight: bolder;
+      margin-left: 20px;
+    }
+
+    h2 {
+      color: #eee;
+      margin-left: 30px;
+    }
+    p::before {
+      display: inline-block;
+      content: "";
+      border-left: 0.3rem solid red;
+      height: 110px;
+      transform: translate(-30px, 100px);
+    }
+    p {
+      width: 400px;
+      text-align: justify;
+      color: #eee;
+      margin-top: -40px;
+      margin-bottom: 40px;
+      margin-left: 50px;
+    }
+    button {
+      margin-left: 50px;
+      text-align: center;
+      padding: 5px 15px;
+      border-radius: 10px;
+      background-color: $maincolor;
+      font-size: 16px;
+      font-weight: 700;
+      border: 3px solid $color_1;
+      color: #eee;
+      cursor: pointer;
+      transition: 0.3s linear;
+      &:hover {
+        background-color: #eee;
+        color: $maincolor;
+      }
+    }
+  }
+  .home-sec-1-right {
+    width: 500px;
+    height: auto;
+
+    div {
+      position: relative;
+      margin-left: 50px;
+      img {
+        width: 320px;
+        height: auto;
+      }
+
+      .mini-2 {
+        position: absolute;
+        left: -80px;
+        top: 140px;
+      }
+    }
+  }
+}
+.home-sec-2 {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  .heading {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px black;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // gap: 100px;
+    // flex-wrap: wrap;
+    background: rgb(1, 44, 86, 0.4);
+    padding: 20px;
+    color: #eee;
+  }
+
+  .home-sec-2-bg {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    // filter: blur(2px);
+  }
+  .home-sec-2-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    display: flex;
+    gap: 40px;
+    // width: 1000px;
+    margin: 0 auto;
+    div {
+      width: 400px;
+      height: 300px;
+      box-shadow: rgb(255, 255, 255, 0.4) 5px 5px 5px;
+      // border: 10px solid rgba(1, 44, 86, 0.7);
+      // border-top: 30px solid rgba(1, 44, 86, 0.7);
+      // border-bottom: 30px solid rgba(1, 44, 86, 0.7);
+      // border-radius: 20px;
+      // box-shadow: 0px 0px 25px 10px rgba(1, 44, 86, 1);
+      img {
+        width: 400px;
+        height: 300px;
+        border-radius: 20px 0 0 0;
+        // border: 10px solid rgba(1, 44, 86, 0.7);
+        // border-top: 30px solid rgba(1, 44, 86, 0.7);
+        // border-bottom: 30px solid rgba(1, 44, 86, 0.7);
+        // border-radius: 20px;
+        // box-shadow: 0px 0px 25px 10px rgba(1, 44, 86, 1);
+      }
+    }
+  }
+  .sec-2-contact {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    // gap: 100px;
+    flex-wrap: wrap;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(1, 44, 86, 0.4);
+    padding: 20px;
+    color: #eee;
+    .home-sec-2-contact-right-button {
+      margin-left: 50px;
+      text-align: center;
+      padding: 5px 15px;
+      border-radius: 10px;
+      background-color: $maincolor;
+      font-size: 16px;
+      font-weight: 700;
+      border: 3px solid $color_1;
+      color: #eee;
+      cursor: pointer;
+      transition: 0.3s linear;
+      &:hover {
+        background-color: #eee;
+        color: $maincolor;
+      }
+    }
+
+    .home-sec-2-contact-center {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      align-items: center;
+      img {
+        width: 50px;
+      }
+      a {
+        text-decoration: none;
+        color: #eee;
+      }
+    }
+  }
+}

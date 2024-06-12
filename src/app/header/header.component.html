@@ -1,0 +1,31 @@
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+/>
+<div class="nav_container">
+  <div class="logo">
+    <a [routerLink]="'/home'">
+      <img src="/assets/img/photos/Logo.jpg" />
+    </a>
+  </div>
+  <div class="menu">
+    <ul>
+      <!-- <li><a [routerLink]="'/home'">Home</a></li> -->
+      <li><a [routerLink]="'/about'">About</a></li>
+      <li><a [routerLink]="'/gallery'">Gallery</a></li>
+      <li><a [routerLink]="'/book'">Book</a></li>
+      <li>
+        <a [routerLink]="'/contactUs'">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="profile">
+    <li>
+      <a [routerLink]="'/signup'">Sign Up</a>
+    </li>
+    <li>
+      <a [routerLink]="'/login'">Log-In</a>
+    </li>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+$color_1: #cc070c;
+$maincolor: #012c56;
+
+.nav_container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: $maincolor;
+  color: $color_1;
+  padding: 10px;
+}
+ul {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 20px;
+}
+li {
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $color_1;
+      border-radius: 5px;
+    }
+  }
+}
+
+.search {
+  padding: 10px;
+}
+input {
+  padding: 5px;
+  outline: none;
+}
+
+.profile {
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  ul {
+    width: auto;
+    flex-wrap: wrap;
+  }
+}

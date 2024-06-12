@@ -1,0 +1,19 @@
+$color_1: #cc070c;
+$maincolor: #012c56;
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: $maincolor !important;
+  filter: alpha(opacity=60);
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}

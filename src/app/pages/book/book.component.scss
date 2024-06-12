@@ -1,0 +1,115 @@
+// @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.mainbox {
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(rgba(8, 3, 69, 0.2), rgba(26, 17, 67, 0.2)),
+    url("/assets/img/posters/bookbackground.jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.618;
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+}
+
+.spani {
+  color: red !important;
+}
+
+input,
+option {
+  background-color: #3b3b4f;
+  color: #eee !important;
+}
+
+h1,
+p {
+  padding-top: 10px;
+  text-align: center;
+}
+
+form {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 1.2rem 0;
+}
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  //   margin: 0.5rem 0;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input,
+textarea,
+select {
+  margin: 7px 0 0 15px;
+  width: 100%;
+  min-height: 2em;
+}
+
+select,
+.room {
+  width: 7rem;
+  padding: 5px;
+  border: none;
+  background-color: #3b3b4f;
+  color: #eee;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+}
+select {
+  position: relative;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+input,
+textarea {
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+  background-color: #3b3b4f;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: 300px;
+  color: inherit;
+}
+.inactive-date {
+  color: gray; /* Change the text color */
+  pointer-events: none; /* Disable pointer events */
+}
